@@ -44,12 +44,8 @@ char* mystrncat(char* dest, const char* src, unsigned n)
 
 int mystrcmp(const char* a, const char* b)
 {
-	do {
-		int r = (int)*a - (int)*b;
-		if (r) return r;
-	} while (*++a | *++b);
-	
-	return 0;
+	while ((*a == *b) && *a) { ++a; ++b; }
+	return (int)*a - (int)*b;
 }
 
 char* mystrchr(char* s, char c)
