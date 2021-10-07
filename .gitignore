@@ -9,4 +9,4 @@
 # Unignore Make File
 !makefile
 
-.o
+*.o
