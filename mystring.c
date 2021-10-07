@@ -54,9 +54,8 @@ int mystrcmp(const char* a, const char* b)
 
 char* mystrchr(char* s, char c)
 {
-	do { 
-		if (*s == c) return s;
-	} while (*(s++));
+	do { if (*s == c) return s; } 
+	while (*(s++));
 	
 	return 0;
 }
