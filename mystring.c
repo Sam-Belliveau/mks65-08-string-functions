@@ -7,21 +7,21 @@ int mystrlen(const char* s)
 	return e - s;
 }
 
-char* mystrcpy(char *dest, const char *src)
+char* mystrcpy(char* dest, const char* src)
 {
 	char* t = dest;
 	while (*(dest++) = *(src++));
 	return t;  
 }
 
-char* mystrncpy(char *dest, const char *src, unsigned n)
+char* mystrncpy(char* dest, const char* src, unsigned n)
 {
 	char* t = dest;
 	while ((*(dest++) = *(src++)) && n--);
 	return t;
 }
 
-char* mystrcat(char *dest, const char *src)
+char* mystrcat(char* dest, const char* src)
 {
 	char* t = dest;
 
@@ -31,7 +31,7 @@ char* mystrcat(char *dest, const char *src)
 	return t;
 }
 
-char* mystrncat(char *dest, const char *src, unsigned n)
+char* mystrncat(char* dest, const char* src, unsigned n)
 {
 	char* t = dest;
 
@@ -42,19 +42,17 @@ char* mystrncat(char *dest, const char *src, unsigned n)
 	return t;
 }
 
-int mystrcmp(const char *a, const char *b)
+int mystrcmp(const char* a, const char* b)
 {
-	int r;
-	
 	do {
-		r = (int)*a - (int)*b;
+		int r = (int)*a - (int)*b;
 		if (r) return r;
 	} while (*++a | *++b);
 	
 	return 0;
 }
 
-char* mystrchr(char *s, char c)
+char* mystrchr(char* s, char c)
 {
 	do { 
 		if (*s == c) return s;
